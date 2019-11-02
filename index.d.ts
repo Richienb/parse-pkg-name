@@ -1,14 +1,29 @@
+declare interface ParsedPackage {
+    /**
+     * The organisation scope the package is in.
+    */
+    org: string,
+
+    /**
+    * The name of the package.
+    */
+    name: string
+}
+
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Parse a package name, returning the name and org parts.
+ * @param name The package name to parse.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const parsePackageName = require("parse-pkg-name");
+ *
+ * parsePackageName("a")
+ * //=> { org: undefined, name: "a" }
+ *
+ * parsePackageName("@a/b")
+ * //=> { org: "a", name: "b" }
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function parsePackageName(name: string): ParsedPackage;
 
-export = theModule;
+export = parsePackageName;

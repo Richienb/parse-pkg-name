@@ -1,8 +1,8 @@
 {
-    "name": "the-module",
+    "name": "parse-pkg-name",
     "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "description": "Parse a package name, returning the name and org parts.",
+    "repository": "https://github.com/Richienb/parse-pkg-name.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -11,14 +11,21 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=6"
     },
     "scripts": {
         "lint": "eslint .",
         "test": "yarn lint && ava"
     },
-    "keywords": [],
-    "dependencies": {},
+    "keywords": [
+        "package",
+        "name",
+        "parse"
+    ],
+    "dependencies": {
+        "named-regexp-groups": "^1.0.5",
+        "parse-package-name": "^0.1.0"
+    },
     "devDependencies": {
         "ava": "^2.1.0",
         "eslint": "^6.5.1",

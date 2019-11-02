@@ -1,41 +1,33 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Parse package name [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/parse-pkg-name/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/parse-pkg-name)
 
-My awesome module.
+Parse a package name, returning the name and org parts.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/parse-pkg-name.png)](https://npmjs.com/package/parse-pkg-name)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install parse-pkg-name
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const parsePackageName = require("parse-pkg-name");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+parsePackageName("a");
+//=> { org: undefined, name: "a" }
+
+parsePackageName("@a/b");
+//=> { org: "a", name: "b" }
 ```
 
 ## API
 
-### theModule(input, options?)
+### parsePackageName(name)
 
-#### input
+#### name
 
 Type: `string`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The package name to parse.

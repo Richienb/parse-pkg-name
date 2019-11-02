@@ -1,13 +1,7 @@
 import test from "ava"
-import theModule from "."
+import parsePackageName from "."
 
 test("main", (t) => {
-    t.throws(() => {
-        theModule(123)
-    }, {
-        instanceOf: TypeError,
-        message: "Expected a string, got number",
-    })
-
-    t.is(theModule("unicorns"), "unicorns & rainbows")
+    t.deepEqual(parsePackageName("a"), { org: undefined, name: "a" })
+    t.deepEqual(parsePackageName("@a/b"), { org: "a", name: "b" })
 })
