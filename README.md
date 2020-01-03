@@ -20,6 +20,12 @@ parsePackageName("a");
 
 parsePackageName("@a/b");
 //=> { org: "a", name: "b" }
+
+parsePackageName.from({ org: undefined, name: "a" })
+//=> "a"
+
+parsePackageName.from({ org: "a", name: "b" })
+//=> "@a/b"
 ```
 
 ## API
@@ -31,3 +37,11 @@ parsePackageName("@a/b");
 Type: `string`
 
 The package name to parse.
+
+### parsePackageName(data)
+
+#### data
+
+Type: `object`
+
+The parsed package data.
