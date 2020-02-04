@@ -45,3 +45,7 @@ The package name to parse.
 Type: `object`
 
 The parsed package data.
+
+## Upgrading from 1.x
+
+- Minimum supported version is now Node.js 10.

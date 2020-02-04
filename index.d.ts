@@ -1,8 +1,8 @@
-declare interface ParsedPackage {
+interface ParsedPackage {
     /**
      * The organisation scope the package is in.
     */
-    org: string,
+    org: string
 
     /**
     * The name of the package.
@@ -44,4 +44,4 @@ declare const parsePackageName: {
     from(data: ParsedPackage): string
 }
 
-export = parsePackageName;
+export = parsePackageName

@@ -11,7 +11,7 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=6"
+        "node": ">=10"
     },
     "scripts": {
         "lint": "xo",
@@ -20,16 +20,16 @@
     "keywords": [
         "package",
         "name",
-        "parse"
+        "parse",
+        "npm"
     ],
     "dependencies": {
-        "named-regexp-groups": "^1.0.5",
-        "ow": "^0.15.0",
+        "ow": "^0.15.1",
         "parse-package-name": "^0.1.0"
     },
     "devDependencies": {
-        "ava": "^2.4.0",
-        "eslint-config-richienb": "^0.2.3",
+        "ava": "^3.2.0",
+        "eslint-config-richienb": "^0.3.0",
         "xo": "^0.25.3"
     },
     "resolutions": {

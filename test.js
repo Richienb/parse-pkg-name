@@ -1,5 +1,5 @@
-import test from "ava"
-import parsePackageName from "."
+const test = require("ava")
+const parsePackageName = require(".")
 
 test("parse", (t) => {
     t.deepEqual(parsePackageName("a"), { org: undefined, name: "a" })
