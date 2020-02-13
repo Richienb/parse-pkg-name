@@ -24,7 +24,7 @@
         "npm"
     ],
     "dependencies": {
-        "ow": "^0.15.1",
+        "ow": "^0.16.0",
         "parse-package-name": "^0.1.0"
     },
     "devDependencies": {
